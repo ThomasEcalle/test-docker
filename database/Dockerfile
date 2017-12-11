@@ -5,4 +5,6 @@ ENV MYSQL_DATABASE="mydb"
 
 ADD mySchema.sql /docker-entrypoint-initdb.d
 
-RUN "mysql -u root --password="bagabu" mydb < /docker-entrypoint-initdb.d"
+RUN mysqld start
+
+RUN mysql -u root --password="babar" mydb
