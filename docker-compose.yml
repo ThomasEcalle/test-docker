@@ -7,4 +7,4 @@ services:
   redis:
     image: "redis:alpine"
   db:
-    image: toto:latest
+    build: ./database
