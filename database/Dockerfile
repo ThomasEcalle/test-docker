@@ -1,10 +1,8 @@
 FROM mysql:8.0.3
 
-ENV MYSQL_ROOT_PASSWORD="babar"
-ENV MYSQL_DATABASE="mydb"
+ENV MYSQL_ROOT_PASSWORD=babar
+ENV MYSQL_DATABASE=mydb
 
-ADD mySchema.sql /docker-entrypoint-initdb.d
+ADD ./mySchema.sql /docker-entrypoint-initdb.d
 
-RUN mysqld start
-
-RUN mysql -u root --password="babar" mydb
+EXPOSE 3306
