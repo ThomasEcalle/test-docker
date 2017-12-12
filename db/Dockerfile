@@ -1,4 +1,4 @@
-FROM mysql:5.7
+FROM mysql:latest
 
 LABEL maintainer="Thomas Ecalle"
-ADD ./mySchema.sql /docker-entrypoint-initdb.d
+ADD ./mySchema.sql /docker-entrypoint-initdb.d/mySchema.sql

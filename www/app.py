@@ -23,8 +23,11 @@ def get_users():
     sqlstr = "SELECT * from user"
     print(sqlstr)
     cur = db.cursor()
+
     cur.execute(sqlstr)
-    return jsonify(data=cur.fetchall())
+    data = cur.fetchall()
+    db.close()
+    return jsonify(data=data)
 
 
 if __name__ == "__main__":

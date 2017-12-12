@@ -15,4 +15,4 @@ services:
     ports:
       - "3306:3306"
     volumes:
-        - /srv/toto/db:/var/lib/mysql
+        - ./db/mySchema.sql:/docker-entrypoint-initdb.d/mySchema.sql:ro

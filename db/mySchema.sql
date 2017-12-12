@@ -1,14 +1,13 @@
+DROP DATABASE IF EXISTS `test`;
+CREATE DATABASE test;
+USE test;
 
-use test;
-
-CREATE TABLE user
-(
-id INTEGER AUTO_INCREMENT,
-name VARCHAR,
-PRIMARY KEY (id)
+CREATE TABLE user (
+    id int AUTO_INCREMENT,
+    name varchar(255),
+	PRIMARY KEY (id)
 );
-
-INSERT INTO user VALUES ('','Ecalle')
-INSERT INTO user VALUES ('','Phee')
-INSERT INTO user VALUES ('','Pougetoux')
-INSERT INTO user VALUES ('','Soldé')
+INSERT INTO user (name) VALUES ('Ecalle');
+INSERT INTO user (name) VALUES ('Pougetoux');
+INSERT INTO user (name) VALUES ('Phee');
+INSERT INTO user (name) VALUES ('Babar');
